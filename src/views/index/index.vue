@@ -159,9 +159,8 @@
             </a>
             <el-popover placement="top" width="250" trigger="hover">
               <p>
-                加群获取，谢谢您愿意支持开源
+                群内自取
               </p>
-              <el-image :src="require('@/assets/ewm.png')"></el-image>
               <a slot="reference" target="_blank">
                 <el-button type="warning">文档</el-button>
               </a>

@@ -7,7 +7,7 @@ Vue.use(VueRouter);
 export const constantRoutes = [
   {
     path: "/login",
-    component: (resolve) => require(["@/views/login/index"], resolve),
+    component: () => import("@/views/login/index"),
     hidden: true,
   },
   {
@@ -17,7 +17,7 @@ export const constantRoutes = [
     children: [
       {
         path: "/redirect/:path(.*)",
-        component: (resolve) => require(["@/views/redirect/index"], resolve),
+        component: () => import("@/views/redirect/index"),
       },
     ],
   },
@@ -33,7 +33,7 @@ export const asyncRoutes = [
       {
         path: "/index",
         name: "Index",
-        component: (resolve) => require(["@/views/index/index"], resolve),
+        component: () => import("@/views/index/index"),
         meta: {
           title: "首页",
           icon: "home",
@@ -51,7 +51,7 @@ export const asyncRoutes = [
       {
         path: "test",
         name: "Test",
-        component: (resolve) => require(["@/views/test/index"], resolve),
+        component: () => import("@/views/test/index"),
         meta: { title: "test", icon: "marker" },
       },
     ],
@@ -64,8 +64,7 @@ export const asyncRoutes = [
       {
         path: "permission",
         name: "Permission",
-        component: (resolve) =>
-          require(["@/views/byui/permission/index"], resolve),
+        component: () => import("@/views/byui/permission/index"),
         meta: { title: "权限控制", icon: "user-shield" },
       },
     ],
@@ -80,183 +79,170 @@ export const asyncRoutes = [
       {
         path: "codeGenerator",
         name: "CodeGenerator",
-        component: (resolve) =>
-          require(["@/views/byui/codeGenerator/index"], resolve),
+        component: () => import("@/views/byui/codeGenerator/index"),
         meta: { title: "代码生成机" },
       },
       {
         path: "markdown",
         name: "Markdown",
-        component: (resolve) =>
-          require(["@/views/byui/markdown/index"], resolve),
+        component: () => import("@/views/byui/markdown/index"),
         meta: { title: "markdown阅读器" },
       },
       {
         path: "smallComponents",
         name: "SmallComponents",
-        component: (resolve) =>
-          require(["@/views/byui/smallComponents/index"], resolve),
+        component: () => import("@/views/byui/smallComponents/index"),
         meta: { title: "小组件" },
       },
       {
         path: "icon",
         name: "Icon",
-        component: (resolve) => require(["@/views/byui/icon/index"], resolve),
+        component: () => import("@/views/byui/icon/index"),
         meta: { title: "常规图标" },
       },
       {
         path: "colorfulIcon",
         name: "ColorfulIcon",
-        component: (resolve) =>
-          require(["@/views/byui/icon/colorfulIcon"], resolve),
+        component: () => import("@/views/byui/icon/colorfulIcon"),
         meta: { title: "多彩图标" },
       },
       {
         path: "remixicon",
         name: "Remixicon",
-        component: (resolve) =>
-          require(["@/views/byui/icon/remixicon"], resolve),
+        component: () => import("@/views/byui/icon/remixicon"),
         meta: { title: "小清新图标" },
       },
       {
         path: "upload",
         name: "Upload",
-        component: (resolve) => require(["@/views/byui/upload/index"], resolve),
+        component: () => import("@/views/byui/upload/index"),
         meta: { title: "上传" },
       },
       {
         path: "webUploader",
         name: "WebUploader",
-        component: (resolve) =>
-          require(["@/views/byui/webUploader/index"], resolve),
+        component: () => import("@/views/byui/webUploader/index"),
         meta: { title: "webUploader上传" },
       },
       {
         path: "sticky",
         name: "Sticky",
-        component: (resolve) => require(["@/views/byui/sticky/index"], resolve),
+        component: () => import("@/views/byui/sticky/index"),
         meta: { title: "sticky吸附" },
       },
       {
         path: "table",
         name: "Table",
-        component: (resolve) => require(["@/views/byui/table/index"], resolve),
+        component: () => import("@/views/byui/table/index"),
         meta: { title: "表格" },
       },
       {
         path: "form",
         name: "Form",
-        component: (resolve) => require(["@/views/byui/form/index"], resolve),
+        component: () => import("@/views/byui/form/index"),
         meta: { title: "表单" },
       },
       {
         path: "tree",
         name: "Tree",
-        component: (resolve) => require(["@/views/byui/tree/index"], resolve),
+        component: () => import("@/views/byui/tree/index"),
         meta: { title: "树" },
       },
       {
         path: "card",
         name: "Card",
-        component: (resolve) => require(["@/views/byui/card/index"], resolve),
+        component: () => import("@/views/byui/card/index"),
         meta: { title: "卡片" },
       },
       {
         path: "magnifier",
         name: "Magnifier",
-        component: (resolve) =>
-          require(["@/views/byui/magnifier/index"], resolve),
+        component: () => import("@/views/byui/magnifier/index"),
         meta: { title: "放大镜" },
       },
       {
         path: "waterfall",
         name: "Waterfall",
-        component: (resolve) =>
-          require(["@/views/byui/waterfall/index"], resolve),
+        component: () => import("@/views/byui/waterfall/index"),
         meta: { title: "瀑布屏", noCache: true },
       },
       {
         path: "echarts",
         name: "Echarts",
-        component: (resolve) =>
-          require(["@/views/byui/echarts/index"], resolve),
+        component: () => import("@/views/byui/echarts/index"),
         meta: { title: "图表" },
       },
 
       {
         path: "loading",
         name: "Loading",
-        component: (resolve) =>
-          require(["@/views/byui/loading/index"], resolve),
+        component: () => import("@/views/byui/loading/index"),
         meta: { title: "loading" },
       },
       {
         path: "player",
         name: "Player",
-        component: (resolve) => require(["@/views/byui/player/index"], resolve),
+        component: () => import("@/views/byui/player/index"),
         meta: { title: "视频播放器", noCache: true },
       },
       {
         path: "editor",
         name: "Editor",
-        component: (resolve) => require(["@/views/byui/editor/index"], resolve),
+        component: () => import("@/views/byui/editor/index"),
         meta: { title: "富文本编辑器" },
       },
       {
         path: "qrCode",
         name: "QrCode",
-        component: (resolve) => require(["@/views/byui/qrCode/index"], resolve),
+        component: () => import("@/views/byui/qrCode/index"),
         meta: { title: "二维码" },
       },
       {
         path: "backToTop",
         name: "BackToTop",
-        component: (resolve) =>
-          require(["@/views/byui/backToTop/index"], resolve),
+        component: () => import("@/views/byui/backToTop/index"),
         meta: { title: "返回顶部" },
       },
       {
         path: "lodash",
         name: "Lodash",
-        component: (resolve) => require(["@/views/byui/lodash/index"], resolve),
+        component: () => import("@/views/byui/lodash/index"),
         meta: { title: "lodash" },
       },
       {
         path: "imgComparison",
         name: "ImgComparison",
-        component: (resolve) =>
-          require(["@/views/byui/imgComparison/index"], resolve),
+        component: () => import("@/views/byui/imgComparison/index"),
         meta: { title: "图像拖拽比对" },
       },
       {
         path: "log",
         name: "Log",
-        component: (resolve) =>
-          require(["@/views/byui/errorLog/index"], resolve),
+        component: () => import("@/views/byui/errorLog/index"),
         meta: { title: "错误日志模拟" },
       },
       {
         path: "more",
         name: "More",
-        component: (resolve) => require(["@/views/byui/more/index"], resolve),
+        component: () => import("@/views/byui/more/index"),
         meta: { title: "更多组件" },
       },
       {
         path: "news",
         name: "News",
-        component: (resolve) => require(["@/views/byui/news/index"], resolve),
+        component: () => import("@/views/byui/news/index"),
         meta: { title: "新闻（可能存在跨域）" },
       },
     ],
   },
   {
     path: "/401",
-    component: (resolve) => require(["@/views/401"], resolve),
+    component: () => import("@/views/401"),
     meta: { title: "401错误页演示", icon: "bug" },
   },
   {
     path: "/404",
-    component: (resolve) => require(["@/views/404"], resolve),
+    component: () => import("@/views/404"),
     meta: { title: "404错误页演示", icon: "bug" },
   },
   {

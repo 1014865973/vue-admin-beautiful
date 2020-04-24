@@ -1,7 +1,7 @@
 <template>
   <div class="login-container">
     <el-alert
-      title="欢迎加入vue-admin-beautifulQQ群：972435319"
+      title="beautiful boys and girls欢迎加入vue-admin-beautifulQQ群：972435319"
       type="success"
       :closable="false"
     >
@@ -18,7 +18,7 @@
           label-position="left"
         >
           <div class="title">
-            你好！
+            hello !
           </div>
           <div class="title-tips">欢迎来到{{ title }}！</div>
           <el-form-item
@@ -180,14 +180,15 @@ export default {
 
 <style lang="scss" scoped>
 .login-container {
-  background: url("~@/assets/login_images/background.jpg") no-repeat;
+  background: url("~@/assets/login_images/background.jpg") center center fixed
+    no-repeat;
   background-size: cover;
+  min-height: 600px;
   height: 100vh;
 
   .title {
     height: 50px;
     font-size: 54px;
-    font-family: Source Han Sans CN;
     font-weight: 500;
     color: rgba(14, 18, 26, 1);
   }
@@ -195,7 +196,6 @@ export default {
   .title-tips {
     height: 24px;
     font-size: 26px;
-    font-family: Source Han Sans CN;
     font-weight: 400;
     color: rgba(14, 18, 26, 1);
     margin-top: 29px;
@@ -203,16 +203,9 @@ export default {
 
   .login-btn {
     height: 60px;
-    border-radius: 99px;
     width: 220px;
     display: inherit;
-    background: linear-gradient(
-      90deg,
-      rgba(90, 97, 240, 1),
-      rgba(106, 142, 239, 1)
-    );
     border: 0;
-    box-shadow: 0 17px 21px 0 rgba(152, 173, 241, 0.44);
     margin-top: 5px;
 
     &:hover {
@@ -233,7 +226,6 @@ export default {
   .login-form {
     position: relative;
     max-width: 100%;
-    background-size: 100% 100%;
     overflow: hidden;
     margin: 22vh 10% 10%;
 
@@ -329,7 +321,6 @@ export default {
       input {
         background: #f6f4fc;
         border: 0;
-        border-radius: 99px;
         color: $base-font-color;
         caret-color: $base-font-color;
         padding-left: 45px;
