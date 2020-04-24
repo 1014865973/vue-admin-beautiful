@@ -474,8 +474,20 @@ export default {
                 value: 800,
               },
               {
-                name: "赚钱",
+                name: "money",
                 value: 700,
+              },
+              {
+                name: "qingdao",
+                value: 800,
+              },
+              {
+                name: "yantai",
+                value: 9000,
+              },
+              {
+                name: "author is very cool",
+                value: 9200,
               },
             ],
           },
