@@ -175,7 +175,7 @@
                 <el-button type="warning">官方讨论群 972435319</el-button>
               </a>
             </el-popover>
-            <el-popover placement="top" width="250" trigger="hover">
+           <!-- <el-popover placement="top" width="250" trigger="hover">
               <p>
                 谢谢您愿意支持开源 群主每周在线授课 每天在线答疑
                 你会得到意想不到的收获
@@ -187,7 +187,7 @@
               <a slot="reference" target="_blank">
                 <el-button type="warning">VIP授课群 氪金用户进</el-button>
               </a>
-            </el-popover>
+            </el-popover>-->
           </div>
         </el-card>
       </el-col>
